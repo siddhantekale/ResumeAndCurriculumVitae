@@ -1,0 +1,209 @@
+%----------------------------------------------------------------------------------------
+%	DOCUMENT DEFINITION
+%----------------------------------------------------------------------------------------
+
+% article class because we want to fully customize the page and not use a cv template
+\documentclass[a4paper,12pt]{article}
+
+%----------------------------------------------------------------------------------------
+%	FONT
+%----------------------------------------------------------------------------------------
+
+% % fontspec allows you to use TTF/OTF fonts directly
+% \usepackage{fontspec}
+% \defaultfontfeatures{Ligatures=TeX}
+
+% % modified for ShareLaTeX use
+% \setmainfont[
+% SmallCapsFont = Fontin-SmallCaps.otf,
+% BoldFont = Fontin-Bold.otf,
+% ItalicFont = Fontin-Italic.otf
+% ]
+% {Fontin.otf}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES
+%----------------------------------------------------------------------------------------
+\usepackage{url}
+\usepackage{parskip} 	
+
+%other packages for formatting
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9]{geometry}
+
+%tabularx environment
+\usepackage{tabularx}
+
+%for lists within experience section
+\usepackage{enumitem}
+
+% centered version of 'X' col. type
+\newcolumntype{C}{>{\centering\arraybackslash}X} 
+
+%to prevent spillover of tabular into next pages
+\usepackage{supertabular}
+\usepackage{tabularx}
+\newlength{\fullcollw}
+\setlength{\fullcollw}{0.47\textwidth}
+
+%custom \section
+\usepackage{titlesec}				
+\usepackage{multicol}
+\usepackage{multirow}
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{10pt}{10pt}
+
+%for publications
+\usepackage[style=authoryear,sorting=ynt, maxbibnames=2]{biblatex}
+
+%Setup hyperref package, and colours for links
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+\addbibresource{citations.bib}
+\setlength\bibitemsep{1em}
+
+%for social icons
+\usepackage{fontawesome5}
+
+%debug page outer frames
+%\usepackage{showframe}
+
+%----------------------------------------------------------------------------------------
+%	BEGIN DOCUMENT
+%----------------------------------------------------------------------------------------
+\begin{document}
+
+% non-numbered pages
+\pagestyle{empty} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE
+%----------------------------------------------------------------------------------------
+
+% \begin{tabularx}{\linewidth}{ @{}X X@{} }
+% \huge{Your Name}\vspace{2pt} & \hfill \emoji{incoming-envelope} email@email.com \\
+% \raisebox{-0.05\height}\faGithub\ username \ | \
+% \raisebox{-0.00\height}\faLinkedin\ username \ | \ \raisebox{-0.05\height}\faGlobe \ mysite.com  & \hfill \emoji{calling} number
+% \end{tabularx}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Siddhant Ekale} \\[7.5pt]
+% \href{https://github.com/username}{\raisebox{-0.05\height}\faGithub\ username} \ $|$ \ 
+\href{https://linkedin.com/in/siddhantekale}{\raisebox{-0.05\height}\faLinkedin\ linkedin.com/in/siddhantekale} \ $|$ \ 
+% \href{https://mysite.com}{\raisebox{-0.05\height}\faGlobe \ mysite.com} \ $|$ \ 
+\href{mailto:siddhant.ekale1994@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ siddhant.ekale1994@gmail.com} \ $|$ \ 
+\href{tel:+17657728212}{\raisebox{-0.05\height}\faMobile \ +1 765 772 8212} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+%Interests/ Keywords/ Summary
+\section{Summary}
+I lead the healthcare and life sciences product development at Palantir Technologies. In my career at Palantir, I have developed Clinical Data Management(CDM) and Hospital supply-chain solutions that are deployed at national and international(commercial and government) institutions. At Palantir, I was quickly promoted from an IC Forward Deployed Engineer to head the product development for all our life sciences business(\$100M+) within 4 years. I am also a recognized peer-reviewer of life-sciences work at reputed publications such as IMWUT, CHI, VIS VAHC, HRI, IEEE VR and HAI.
+
+%Experience
+\section{Work Experience}
+
+\textbf{Palantir Technologies, Head of Product - Life Sciences} \hfill May 2019 - Present
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] \textit{GxP 21 CFR Part 11} \hfill 2022 - Present
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[--] Lead the GxP(Good Clinical Practices) team at Palantir(10 engineers) where we developed a pragmatic approach for qualifying SaaS data management software for FDA submission GxP use-cases for drug commercialization. I designed an approach using GAMP principles that isolated high-risk functional components to achieve sustainable and continuous validation.
+            \item[--] Lead the deployment of this GxP solution with customers like Novartis and other big pharmaceuticals & large CROs for running primary analysis use-cases within Foundry.
+        \end{itemize}
+        \item[--] \textit{Clinical Data Management (CDM)} \hfill 2021 - Present
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[--] Developed the product roadmap for an end-to-end clinical data management solution for big pharmaceuticals. Responsible for a portfolio of \$100M opportunities that need to conform to GxP, HIPPA, and GDPR regulations for FDA submissions.
+            \item[--] Led the technical strategy for the development of an end-to-end clinical data management solutions that reduces the time from last clinical observation to database lock by 50\% (Median data-lock time: 40 days). This differentiated offering allows data health-checks to be applied at point of capture and provides faster feedback loops between clinical observation entry and SDTM harmonization.
+        \end{itemize}
+        \item[--] \textit{Medical Equipment Supply Chain} \hfill 2020 - 2022
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[--] In 2020, I was selected as one of 40 leading healthcare technologies to build the supply-chain solution for the U.K's healthcare system - NHS. Worked with Chief Nurse, National Leads and the Prime Minister's office to deploy a solution that equitably distributed 1200+ ICU Ventilators and 2 million PPE. The solution comprised of a software that would enable collaboration between 600 hospitals and the central team at the NHS. The software corroborated hospital requests with independently provided COVID statistics including bed count and ICU patients.
+            \item[--] Designed and developed early warning system for the home-office in the UK to track emerging COVID hotspots. The data visualizations produced in the software were shared in national news. Local governments and PM office used this information for planning lock-downs.
+            \item[--] In 2021, I was called to the U.S under a National Interest Exception (NIE), to lead medical supply-chain offerings for commercial clients. Successfully designed and deployed a solution for a big pharmaceutical that supplied ~90\% of the pneumoccocal immunizations.
+        \end{itemize}
+    \end{itemize}
+
+\textbf{MoyMed - Cofounder} \hfill January 2020 - December 2020
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Designed and led the development of a healthcare records tracking tool that helped senior folks with non-technical backgrounds index and store their medical records. This software also helped patients remember their dosing information and appointments. The target demographic was patients with rare diseases who needed to track symptoms for early intervention. Selected as top 10\% YCombinator startup.
+    \end{itemize}
+
+\textbf{Digital Control Inc - Embedded Software Engineer II} \hfill Oct 2017 - May 2019
+\begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+    \item[--] Linux kernel-based library development to bring up software and hardware for ASIC implementation of device that did over-ground locating of underground noise for directional drilling. Developed user-space daemons and libraries in C++ to access and utilize hardware components.
+    \item[--] Developed a library for encrypting / decrypting data flow across peripherals on specialized hardware.
+\end{itemize}
+
+\textbf{Helitrak Inc - Software Engineering Intern} \hfill May 2017 - Oct 2017
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Startup that built autonomous rotor recovery and autopilots for R44 helicopters. Wrote a C library to over HID to collect and process telemetry of helicopter in real-time. Sat on test flights and ran the software I authored on live sensors.
+        \item[--] Developed tools and scripts that did post-processing on test-flight data to check FAA acceptance criteria.
+    \end{itemize}
+
+\textbf{Lutron Electronics - Embedded Software Engineer Intern} \hfill June 2016 - Aug 2016
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+        \item[--] Optimized firmware update algorithms (s-rec transmission) for 2x upgrade which saved \$800/day.
+        \item[--] Developed windows forms application in C# (.NET 4.5) to run the new firmware update algorithm.
+    \end{itemize}
+    
+%----------------------------------------------------------------------------------------
+%	CONFERENCES
+%----------------------------------------------------------------------------------------
+\section{Conferences - Speaker and Distinguished Panelist}
+\textbf{Global Clinical Trials Connect}  - Speaker, Good Clinical Data Management Practices  \hfill 2022 \\
+\textbf{Global Clinical Trials Connect} - Distinguished Panelist \hfill 2022 \\
+\textbf{E.ON Developer Conference} - Speaker, Palantir for Advanced ML in Healthcare \hfill 2022 \\
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}	
+2013 - 2016 & Bachelor of Computer Engineering at \textbf{Purdue University} \hfill \normalsize (GPA: 3.5/4.0) \\
+2022 & High School - Science at \textbf{DPS Sharjah} \hfill  (93\%) \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	TEACHING
+%----------------------------------------------------------------------------------------
+\section{Teaching}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Purdue University} \\[3.75pt]
+    \begin{minipage}[t]{\linewidth}
+        \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]
+            \item[--] \textit{Teaching Assistant - Computer Architecture, Modern Mechanics and Programming in C} \hfill 2014 - 2016
+        \end{itemize}
+    \end{minipage}
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%Projects
+%----------------------------------------------------------------------------------------
+\section{Projects}
+\begin{tabularx}{\linewidth}{ @{}l r@{} }
+\textbf{Moodify} & \hfill \href{https://github.com/hthatukuru/Moodify}{Demo} \\[3.75pt]
+\multicolumn{2}{@{}X@{}}{Application that captured user’s current state of mood and curated a spotify playlist to change the mood of the individual. It was based on the valence property of a Spotify library song which measured “up-beatness”. The playlist further curated the list to the user's past choices.}  \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Programming &  \normalsize{C, C++, React, Redux, Python, Bash, System Verilog, Qt dev using C++, Git}\\
+Regulatory Expertise  &  \normalsize{21 CFR Part 11, EU Annex 11, GDPR, HIPPA, FAA}\\  
+\end{tabularx}
+
+\vfill
+\center{\footnotesize Last updated: \today}
+
+\end{document}
